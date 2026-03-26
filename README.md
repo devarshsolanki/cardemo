@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project - **Techtaxi** - A premium car rental platform with animated scroll effects and booking functionality.
 
 ## Getting Started
 
@@ -6,31 +6,73 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/` - Next.js App Router pages and components
+- `app/components/` - React components (CarScrollAnimation, BookingModal, etc.)
+- `app/context/` - React Context for state management
+- `public/` - Static assets
+- `app/globals.css` - Global styles with Tailwind CSS
+
+## Technologies Used
+
+- **Next.js 16.1** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **PostCSS** - CSS processing
+
+## Building & Deployment
+
+### Local Build
+
+```bash
+npm run build
+npm run start
+```
+
+### Deploy on Vercel
+
+The easiest way to deploy is using the [Vercel Platform](https://vercel.com):
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will auto-detect Next.js and configure build settings
+4. Deploy with one click
+
+**Important:** The project is fully optimized for Vercel deployment. All necessary configuration files are included:
+- `vercel.json` - Vercel-specific settings
+- `next.config.ts` - Next.js configuration
+- `.vercelignore` - Files to exclude from Vercel deployment
+
+### Troubleshooting Deployment
+
+If you see a default Next.js page after deployment:
+
+1. **Clear Vercel cache**: Go to Vercel project settings → Deployments → Clear cache
+2. **Check build logs**: Review the build logs in Vercel dashboard for any errors
+3. **Verify branch**: Ensure you're deploying from the correct branch
+4. **Rebuild manually**: Trigger a manual redeploy from Vercel dashboard
+
+### Environment Variables
+
+Currently, no environment variables are required. If you add features that need them, create a `.env.local` file locally and configure them in Vercel dashboard.
+
+## Lint & Type Checking
+
+```bash
+npm run lint
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Vercel Deployment Guide](https://nextjs.org/docs/app/building-your-application/deploying)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Framer Motion](https://www.framer.com/motion/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
